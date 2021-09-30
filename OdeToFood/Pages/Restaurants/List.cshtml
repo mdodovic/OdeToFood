@@ -8,6 +8,20 @@
 
 <div>@Model.Message</div>
 
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    X
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
 <table class="table">
     @foreach (var restaurant in Model.Restaurants)
     {
@@ -19,16 +33,3 @@
     }
 </table>
 
-<form method="get">
-    <div class="form-group">
-        <div class="input-group">
-            <input type="search" name="searchTerm" class="form-control" value="" />
-            <span class="input-group-btn">
-                <button class="btn btn-default">
-                    X
-                    <i class="glyphicon glyphicon-search"></i>
-                </button>
-            </span>
-        </div>
-    </div>
-</form>
