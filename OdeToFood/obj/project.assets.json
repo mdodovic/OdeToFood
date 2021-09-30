@@ -1818,6 +1818,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "OdeToFood.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/OdeToFood.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OdeToFood.Core.dll": {}
+        }
+      },
+      "OdeToFood.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "OdeToFood.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OdeToFood.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OdeToFood.Data.dll": {}
+        }
       }
     }
   },
@@ -6148,11 +6171,22 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "OdeToFood.Core/1.0.0": {
+      "type": "project",
+      "path": "../OdeToFood.Core/OdeToFood.Core.csproj",
+      "msbuildProject": "../OdeToFood.Core/OdeToFood.Core.csproj"
+    },
+    "OdeToFood.Data/1.0.0": {
+      "type": "project",
+      "path": "../OdeToFood.Data/OdeToFood.Data.csproj",
+      "msbuildProject": "../OdeToFood.Data/OdeToFood.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
+      "OdeToFood.Data >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6191,7 +6225,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Matija\\Desktop\\OdeToFood\\OdeToFood\\OdeToFood.Data\\OdeToFood.Data.csproj": {
+              "projectPath": "C:\\Users\\Matija\\Desktop\\OdeToFood\\OdeToFood\\OdeToFood.Data\\OdeToFood.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
