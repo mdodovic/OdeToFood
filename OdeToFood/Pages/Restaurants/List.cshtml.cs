@@ -17,10 +17,10 @@ namespace OdeToFood.Pages.Restaurants
         }
 
 
-        public void OnGet()
+        public void OnGet(string searchTerm)
         {
             Message = "Hello, World!";
-            Restaurants = restaurantData.GetAll();
+            Restaurants = restaurantData.GetRestaurantsByName(searchTerm);
         }
     }
 }
