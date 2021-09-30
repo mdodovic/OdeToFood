@@ -22,7 +22,7 @@ namespace OdeToFood.Pages.Restaurants
 
         public void OnGet()
         {
-            Message = "Hello, World!";
+            Message = "Hello everybody!";
             Restaurants = restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }

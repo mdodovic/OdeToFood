@@ -1,19 +1,14 @@
-﻿@page
+﻿@page "{restaurantId:int}"
+
 @model OdeToFood.Pages.Restaurants.Detail
 
 @{
-    Layout = null;
 }
 
-<!DOCTYPE html>
+<h2>@Model.Restaurant.Name</h2>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
-</div>
-</body>
-</html>
+<div>Id: @Model.Restaurant.Id</div>
+<div>Location: @Model.Restaurant.Location</div>
+<div>Cuisine: @Model.Restaurant.Cuisine</div>
+
+<a asp-page="./List" class="btn btn-default">All Restaurants</a>
