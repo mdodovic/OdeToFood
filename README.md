@@ -41,10 +41,11 @@ In JetBrains.Rider IDE, database connection to created SQL Server should be esta
 
 Entity framework is used to set up migrations, and for database management.
 
-Initially, this framework is not installed, hence it should be done using the following command:
+Initially, this framework is not installed, hence it should be done using the following commands:
 
 ```
 dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
 ```
 
 ### Migrations
@@ -56,3 +57,19 @@ dotnet ef migrations add initialcreate -s ..\OdeToFood\OdeToFood.csproj
 dotnet ef database update -s ..\OdeToFood\OdeToFood.csproj
 ```
 
+## Api
+
+### Api Contoller
+
+Initially, the ```aspnet-codegenerator``` is not installed, hence it should be done using the following commands:
+
+```
+dotnet tool install -g dotnet-aspnet-codegenerator
+dotnet tool update -g dotnet-aspnet-codegenerator
+```
+
+RestaurantsController encapsulate methods invoked by different get and post (with parameters) requests for specific, ```api/...```, path. In order to add this controller execute following command:
+
+```
+dotnet aspnet-codegenerator controller -api -name RestaurantsController --model OdeToFood.Core.Restaurant --dataContext OdeToFood.Data.OdeToFoodDbContext 
+```
